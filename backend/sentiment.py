@@ -1,6 +1,6 @@
 from transformers import BertTokenizer, BertModel
 import torch
-import torch.nn as nn
+import torch.nn as nn  
 
 
 class BERTClassifier(nn.Module):
@@ -45,7 +45,7 @@ def predict(text):
 
 # Define model and load pre-trained weights
 model = BERTClassifier('bert-base-uncased', num_classes=3)  # Adjust num_classes according to your task
-model.load_state_dict(torch.load('C:\\Users\\deeks\\OneDrive\\Desktop\\practice2\\files\\bert_classifier_three_labeled11.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('..\\faail\\bert_classifier_three_labeled11.pth', map_location=torch.device('cpu')))
 
 
 # Tokenizer initialization
